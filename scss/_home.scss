@@ -1,0 +1,32 @@
+.home{
+    height: 100%;
+    padding-top: 25vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, rgba($primary-color, .0), rgba($primary-color, .0)),
+        url('/img/bgimg.jpg') center top;
+    background-size: cover;
+
+
+    h2{
+        font-size: 2rem;
+    }
+
+    &-name {
+        font-size: 5rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid set-text-color($primary-color);
+        &-last{
+            color: $secondary-color;
+            font-weight: 700;
+        }
+    }
+    &-image{
+        border:5px solid $secondary-color;
+        height: 250px;
+        margin: 0;
+        border-radius: 250px;
+    }
+}
