@@ -1,0 +1,37 @@
+@include media-md {
+    .menu-btn {
+        visibility: hidden;
+    }
+    .nav {
+        visibility: visible;
+        height: 70px;
+
+        .menu-nav {
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+
+            text-align: right;
+
+            &-item {
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &-link {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .about-image {
+        margin-top: 3rem;
+        height: 190px;
+        @include transition-ease;
+    }
+    .projects-image{
+        margin-top: 6rem;
+        height: 190px;
+        @include transition-ease;
+    }
+}

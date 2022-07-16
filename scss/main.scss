@@ -1,10 +1,10 @@
-@import "config", "home","menu","about";
+@import "config", "home", "menu", "about","projects","contact","responsive";
 
 body {
     background: $primary-color;
     color: set-text-color($primary-color);
     height: 100vh;
-    font-family: 'Kanit', sans-serif;
+    font-family: "Kanit", sans-serif;
     line-height: 1;
 }
 body::-webkit-scrollbar {
@@ -58,3 +58,4 @@ footer {
     padding: 1rem;
     color: set-text-color($primary-color);
 }
+

@@ -10,19 +10,25 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
+        justify-content: center;
 
-        p {
-            margin-bottom: 2rem;
-        }
+      
+        
+        border-bottom: 3px solid $secondary-color;
     }
 
     &-bio {
-        width: 80%;
+        width: 60%;
         text-align: center;
 
+
         .text-secondary {
-            padding-bottom: 1rem;
+            font-size: 2rem;
+            padding-bottom: 0.2rem;            
+        }
+        p{
+            font-size: 1.3rem;
+                font-weight: 400;
         }
     }
 
@@ -39,9 +45,13 @@
             border-bottom: 5px solid $secondary-color;
 
             h2,h3{
+                font-size: 1.4rem;
+                font-weight: 400;
                 margin: .5rem 0;
             }
             h6{
+                font-size: 1rem;
+                font-weight: 600;
                 margin: .3rem 0;
             }
         }
