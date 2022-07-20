@@ -45,11 +45,14 @@
 
     &-item {
         position: relative;
-        border-bottom: 4px solid $secondary-color;
+        border-bottom: 3px solid $secondary-color;
         overflow: hidden;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
         img {
             width: 100%;
+            
         }
 
         &::after {
@@ -67,7 +70,7 @@
         &:hover {
             &::after {
                 top: 0;
-                opacity: 0.9;
+                opacity: 0.8;
             }
             .projects-btn {
                 opacity: 1;
@@ -86,11 +89,12 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         text-align: center;
+        
     }
 
     &-btn {
         text-transform: uppercase;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         opacity: 0;
         font-weight: 700;
         color: set-text-color($secondary-color);

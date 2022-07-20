@@ -29,9 +29,35 @@
         height: 190px;
         @include transition-ease;
     }
-    .projects-image{
-        margin-top: 6rem;
-        height: 190px;
-        @include transition-ease;
+    .projects {
+        &-image {
+            margin-top: 6rem;
+            height: 190px;
+            @include transition-ease;
+        }
+        &-items {
+            width: 60vw;
+            margin: 2rem auto 0 auto;
+            display: grid;
+            grid-template-columns: 3, 1fr;
+            grid-gap: 2rem;
+        }
+    }
+}
+
+@include media-lg{
+    .projects {
+        &-image {
+            margin-top: 6rem;
+            height: 190px;
+            @include transition-ease;
+        }
+        &-items {
+            width: 35vw;
+            margin: 2rem auto 0 auto;
+            display: grid;
+            grid-template-columns: repeat( 1, 1fr);
+            grid-gap: 2rem;
+        }
     }
 }
