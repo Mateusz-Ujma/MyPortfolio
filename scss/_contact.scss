@@ -1,44 +1,53 @@
 .contacts {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(to right, rgba($primary-color, .3), rgba($primary-color, .3)),
-        url("/img/bgimg.jpg") center top;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-&-icon{
-    
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.3),
+      rgba($primary-color, 0.3)
+    ),
+    url('/img/bgimg.jpg') center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &-icon {
     letter-spacing: 3px;
     font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
-    .text-secondary {
-        text-align: center;
-        color: set-text-color($primary-color);
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
+  }
 
-    .social-icons {
-        display: flex;
-        flex-direction: column;
-    }
+  .text-secondary {
+    text-align: center;
+    color: set-text-color($primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 
-    footer {
-        transform: rotate(90deg) translate(-3rem, -4rem);
-    }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
 
-    &-image {
-        border: 5px solid $secondary-color;
-        height: 220px;
-        margin: 0;
-        border-radius: 120px;
+  footer {
+    transform: rotate(90deg) translate(-3rem, -4rem);
+  }
+
+  &-image {
+    border: 5px solid $secondary-color;
+    height: 175px;
+    border-radius: 200px;
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+    i {
+      color: $secondary-color;
     }
-    &-list {
-        display: flex;
-    }
+  }
 }

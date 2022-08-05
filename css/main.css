@@ -35,7 +35,7 @@
 
 .menu-btn {
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   right: 1rem;
   top: 1rem;
   height: 35px;
@@ -150,11 +150,11 @@
   text-align: center;
 }
 .about-bio .text-secondary {
-  font-size: 2rem;
+  font-size: 3rem;
   padding-bottom: 0.2rem;
 }
 .about-bio p {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 .about .jobs {
@@ -169,15 +169,20 @@
   padding: 0.5rem;
   border-bottom: 5px solid #ff652f;
 }
-.about .jobs-job h2, .about .jobs-job h3 {
-  font-size: 1.4rem;
-  font-weight: 400;
+.about .jobs-job h2,
+.about .jobs-job h3 {
+  font-size: 1.7rem;
+  font-weight: 300;
   margin: 0.5rem 0;
 }
 .about .jobs-job h6 {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 400;
   margin: 0.3rem 0;
+}
+.about .jobs-job p {
+  font-weight: 200;
+  font-size: 1.1rem;
 }
 .about .social-icons {
   display: flex;
@@ -188,7 +193,7 @@
 }
 .about-image {
   border: 5px solid #ff652f;
-  height: 220px;
+  height: 250px;
   margin: 0;
   border-radius: 250px;
 }
@@ -220,7 +225,7 @@
 }
 .projects-image {
   border: 5px solid #ff652f;
-  height: 220px;
+  height: 250px;
   margin: 0;
   border-radius: 250px;
 }
@@ -233,51 +238,42 @@
 }
 .projects-item {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-bottom: 3px solid #ff652f;
   overflow: hidden;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
 }
 .projects-item img {
   width: 100%;
 }
-.projects-item::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #ff652f;
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-.projects-item:hover::after {
-  top: 0;
-  opacity: 0.8;
-}
-.projects-item:hover .projects-btn {
-  opacity: 1;
-}
 .projects-btns {
-  position: absolute;
+  background: #ff652f;
+  justify-self: flex-start;
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   text-align: center;
+  opacity: 1;
 }
 .projects-btn {
+  padding-top: 0.6rem;
+  height: 3rem;
   text-transform: uppercase;
   font-size: 0.8rem;
-  opacity: 0;
+  opacity: 1;
   font-weight: 700;
   color: #000;
   transition: all 0.3s ease-in-out;
+  z-index: 2;
 }
 .projects-btn:hover {
   color: #fff;
@@ -309,21 +305,31 @@
 .contacts .social-icons {
   display: flex;
   flex-direction: column;
+  font-size: 1rem;
 }
 .contacts footer {
   transform: rotate(90deg) translate(-3rem, -4rem);
 }
 .contacts-image {
   border: 5px solid #ff652f;
-  height: 220px;
-  margin: 0;
-  border-radius: 120px;
+  height: 175px;
+  border-radius: 200px;
 }
 .contacts-list {
   display: flex;
+  flex-direction: column;
+}
+.contacts-list i {
+  color: #ff652f;
 }
 
 @media screen and (min-width: 768px) {
+  .home .social-icons {
+    font-size: 1.5rem;
+  }
+  .home footer {
+    font-size: 1.5rem;
+  }
   .menu-btn {
     visibility: hidden;
   }
@@ -344,15 +350,53 @@
   .nav .menu-nav-link {
     font-size: 1.5rem;
   }
-  .about-image {
-    margin-top: 3rem;
-    height: 190px;
-    transition: all 0.3s ease-in-out;
+  .about-bio {
+    width: 68%;
+    text-align: center;
+  }
+  .about-bio .text-secondary {
+    font-size: 4rem;
+    padding-bottom: 0.2rem;
+  }
+  .about-bio p {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .about .jobs {
+    width: 70vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  .about .jobs-job {
+    background: #414141;
+    padding: 0.5rem;
+    border-bottom: 5px solid #ff652f;
+  }
+  .about .jobs-job h2,
+.about .jobs-job h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0.5rem 0;
+  }
+  .about .jobs-job h6 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0.3rem 0;
+  }
+  .about .jobs-job p {
+    font-weight: 200;
+    font-size: 1.4rem;
   }
   .projects-image {
-    margin-top: 6rem;
-    height: 190px;
-    transition: all 0.3s ease-in-out;
+    height: px;
+    margin: 0;
+    border-radius: 250px;
+  }
+  .projects .text-secondary {
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
   .projects-items {
     width: 60vw;
@@ -361,19 +405,49 @@
     grid-template-columns: 3, 1fr;
     grid-gap: 2rem;
   }
+  .contacts-image {
+    height: 280px;
+  }
+  .contacts .text-secondary {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+  .contacts i {
+    font-size: 2rem;
+  }
+  .contacts .social-icons {
+    font-size: 3rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   .projects-image {
     margin-top: 6rem;
-    height: 190px;
+    height: 280px;
     transition: all 0.3s ease-in-out;
   }
+  .projects-item img {
+    height: 25rem;
+  }
   .projects-items {
-    width: 35vw;
+    width: 70vw;
     margin: 2rem auto 0 auto;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+  }
+  .projects-items :hover img {
+    transition: all 0.3s ease-in-out;
+    height: 25rem;
+    transform: scale(1.08);
+  }
+  .projects-btn {
+    padding-top: 0.6rem;
+    height: 3rem;
+    text-transform: uppercase;
+    font-size: 1rem;
   }
 }
 body {

@@ -1,63 +1,156 @@
 @include media-md {
-    .menu-btn {
-        visibility: hidden;
+  .home {
+    .social-icons {
+      font-size: 1.5rem;
     }
-    .nav {
-        visibility: visible;
-        height: 70px;
 
-        .menu-nav {
-            display: block;
-            transform: translateY(0);
-            height: 100%;
+    footer {
+      font-size: 1.5rem;
+    }
+  }
 
-            text-align: right;
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+    height: 70px;
 
-            &-item {
-                display: inline;
-                padding-right: 1.5rem;
-            }
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
 
-            &-link {
-                font-size: 1.5rem;
-            }
+      text-align: right;
+
+      &-item {
+        display: inline;
+        padding-right: 1.5rem;
+      }
+
+      &-link {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .about {
+    &-bio {
+      width: 68%;
+      text-align: center;
+
+      .text-secondary {
+        font-size: 4rem;
+        padding-bottom: 0.2rem;
+      }
+      p {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+    .jobs {
+      width: 70vw;
+      margin: 2rem auto 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+
+      &-job {
+        background: lighten($primary-color, 10%);
+        padding: 0.5rem;
+        border-bottom: 5px solid $secondary-color;
+
+        h2,
+        h3 {
+          font-size: 2rem;
+          font-weight: 300;
+          margin: 0.5rem 0;
         }
+        h6 {
+          font-size: 1.5rem;
+          font-weight: 400;
+          margin: 0.3rem 0;
+        }
+        p {
+          font-weight: 200;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  .projects {
+    &-image {
+      height: px;
+      margin: 0;
+      border-radius: 250px;
+    }
+    .text-secondary {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
 
-    .about-image {
-        margin-top: 3rem;
-        height: 190px;
-        @include transition-ease;
+    &-items {
+      width: 60vw;
+      margin: 2rem auto 0 auto;
+      display: grid;
+      grid-template-columns: 3, 1fr;
+      grid-gap: 2rem;
     }
-    .projects {
-        &-image {
-            margin-top: 6rem;
-            height: 190px;
-            @include transition-ease;
-        }
-        &-items {
-            width: 60vw;
-            margin: 2rem auto 0 auto;
-            display: grid;
-            grid-template-columns: 3, 1fr;
-            grid-gap: 2rem;
-        }
+  }
+
+  .contacts {
+    &-image {
+      height: 280px;
     }
+    .text-secondary {
+      text-align: center;
+      color: set-text-color($primary-color);
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+    i {
+      font-size: 2rem;
+    }
+
+    .social-icons {
+      font-size: 3rem;
+    }
+  }
 }
 
-@include media-lg{
-    .projects {
-        &-image {
-            margin-top: 6rem;
-            height: 190px;
-            @include transition-ease;
-        }
-        &-items {
-            width: 35vw;
-            margin: 2rem auto 0 auto;
-            display: grid;
-            grid-template-columns: repeat( 1, 1fr);
-            grid-gap: 2rem;
-        }
+@include media-lg {
+  .projects {
+    &-image {
+      margin-top: 6rem;
+      height: 280px;
+      @include transition-ease;
     }
+    &-item {
+      img {
+        height: 25rem;
+      }
+    }
+    &-items {
+      :hover {
+        img {
+          @include transition-ease;
+          height: 25rem;
+          transform: scale(1.08);
+        }
+      }
+
+      width: 70vw;
+      margin: 2rem auto 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 6rem;
+    }
+    &-btn {
+      padding-top: 0.6rem;
+      height: 3rem;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+  }
 }
