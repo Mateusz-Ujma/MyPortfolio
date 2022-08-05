@@ -1,107 +1,108 @@
 .projects {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 
-    &-bg-image {
-        height: 40vh;
-        width: 100%;
-        background: linear-gradient(to right, rgba($primary-color, 0), rgba($primary-color, 0)),
-            url("/img/bgimg.jpg") center top;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+  &-bg-image {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0),
+        rgba($primary-color, 0)
+      ),
+      url('/img/bgimg.jpg') center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-        .text-secondary {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        border-bottom: 3px solid $secondary-color;
+    .text-secondary {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    border-bottom: 3px solid $secondary-color;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    transform: rotate(90deg) translate(-3rem, -4rem);
+  }
+
+  &-image {
+    border: 5px solid $secondary-color;
+    height: 220px;
+    margin: 0;
+    border-radius: 250px;
+  }
+
+  &-items {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  &-item {
+    position: relative;
+    border-bottom: 3px solid $secondary-color;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 100%;
     }
 
-    .social-icons {
-        display: flex;
-        flex-direction: column;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $secondary-color;
+      opacity: 0;
+      @include transition-ease;
     }
 
-    footer {
-        transform: rotate(90deg) translate(-3rem, -4rem);
-    }
-
-    &-image {
-        border: 5px solid $secondary-color;
-        height: 220px;
-        margin: 0;
-        border-radius: 250px;
-    }
-
-    &-items {
-        width: 60vw;
-        margin: 2rem auto 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
-    }
-
-    &-item {
-        position: relative;
-        border-bottom: 3px solid $secondary-color;
-        overflow: hidden;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        img {
-            width: 100%;
-            
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: $secondary-color;
-            opacity: 0;
-            @include transition-ease;
-        }
-
-        &:hover {
-            &::after {
-                top: 0;
-                opacity: 0.8;
-            }
-            .projects-btn {
-                opacity: 1;
-            }
-        }
-        
-    }
-
-    &-btns {
-        position: absolute;
+    &:hover {
+      &::after {
         top: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        text-align: center;
-        
+        opacity: 0.8;
+      }
+      .projects-btn {
+        opacity: 1;
+      }
     }
+  }
 
-    &-btn {
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        opacity: 0;
-        font-weight: 700;
-        color: set-text-color($secondary-color);
-        @include transition-ease;
+  &-btns {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+  }
 
-        &:hover {
-            color: set-text-color(set-text-color($secondary-color));
-        }
+  &-btn {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    opacity: 0;
+    font-weight: 700;
+    color: set-text-color($secondary-color);
+    @include transition-ease;
+
+    &:hover {
+      color: set-text-color(set-text-color($secondary-color));
     }
+  }
 }
